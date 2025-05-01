@@ -44,6 +44,10 @@ def call_cohere(prompt: str) -> str:
     )
     return response.text
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Cover Letter Generator API. Use /generate-templates or /generate-final endpoints."}
+
 
 @app.post("/generate-templates")
 def generate_templates(data: CoverLetterRequest):
