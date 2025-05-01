@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_BASE = "https://cover-letter-generator-qyle.onrender.com/generate-templates"; // Update this
+const API_BASE = "https://cover-letter-generator-qyle.onrender.com"; // Update this
 
 
 function App() {
