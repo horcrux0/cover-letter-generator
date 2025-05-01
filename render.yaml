@@ -1,0 +1,10 @@
+# render.yaml
+services:
+  - type: web
+    name: cover-letter-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: COHERE_API_KEY
+        value: bFZroHVVPPzKUsTDNCzs4JHlqN2f4g9Qwy65jYWN

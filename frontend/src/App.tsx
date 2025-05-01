@@ -2,7 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_BASE = "http://localhost:8000"; // Replace with deployed backend URL
+const API_BASE = "https://cover-letter-backend.onrender.com"; // Update this
+
 
 function App() {
   const [jobDescription, setJobDescription] = useState("");
