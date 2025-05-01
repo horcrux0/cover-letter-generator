@@ -1,0 +1,9 @@
+# Ignore environment files
+backend/.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore node_modules
+node_modules/
