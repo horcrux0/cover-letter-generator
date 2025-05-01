@@ -44,10 +44,6 @@ def call_cohere(prompt: str) -> str:
     )
     return response.text
 
-@app.get("/")
-def read_root():
-    return {"status": "Backend running"}
-
 @app.post("/generate-templates")
 def generate_templates(data: CoverLetterRequest):
     prompt = (
