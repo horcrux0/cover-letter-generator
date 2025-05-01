@@ -45,10 +45,6 @@ def call_cohere(prompt: str) -> str:
     return response.text
 
 
-@app.get("/favicon.ico")
-def favicon():
-    return FileResponse(os.path.join("static", "favicon.ico"))
-
 @app.post("/generate-templates")
 def generate_templates(data: CoverLetterRequest):
     prompt = (
