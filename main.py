@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import cohere
+from fastapi.responses import FileResponse
+
 
 # Load environment variables
 load_dotenv()
@@ -41,6 +43,11 @@ def call_cohere(prompt: str) -> str:
         max_tokens=1000
     )
     return response.text
+
+
+@app.get("/favicon.ico")
+def favicon():
+    return FileResponse(os.path.join("static", "favicon.ico"))
 
 @app.post("/generate-templates")
 def generate_templates(data: CoverLetterRequest):
