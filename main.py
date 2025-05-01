@@ -44,9 +44,11 @@ def call_cohere(prompt: str) -> str:
     )
     return response.text
 
+app.mount("/static", StaticFiles(directory="frontend/dist/assets"), name="static")
+
 @app.get("/")
-def read_root():
-    return {"message": "Welcome to the Cover Letter Generator API. Use /generate-templates or /generate-final endpoints."}
+def serve_frontend():
+    return FileResponse("frontend/dist/index.html")
 
 
 @app.post("/generate-templates")
