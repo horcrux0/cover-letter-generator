@@ -44,12 +44,9 @@ def call_cohere(prompt: str) -> str:
     )
     return response.text
 
-app.mount("/static", StaticFiles(directory="frontend/dist/assets"), name="static")
-
 @app.get("/")
-def serve_frontend():
-    return FileResponse("frontend/dist/index.html")
-
+def read_root():
+    return {"status": "Backend running"}
 
 @app.post("/generate-templates")
 def generate_templates(data: CoverLetterRequest):
