@@ -1,9 +1,7 @@
-# Ignore environment files
-backend/.env
-
-# Ignore Python cache files
+# .gitignore
 __pycache__/
-*.pyc
-
-# Ignore node_modules
+.env
 node_modules/
+dist/
+*.pycx
+.vscode/
